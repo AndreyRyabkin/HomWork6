@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">androidhw3</string>
+    <string name="remove">удалить</string>
+    <string name="text_post">текст поста</string>
+    <string name="description_post_save">сохранить</string>
+    <string name="post_text">текст поста</string>
+    <string name="error_empty_content">ошибка пустой пост</string>
+    <string name="menu_edit">редактирование</string>
+    <string name="Edit_Message">Редактирование текста</string>
+</resources>

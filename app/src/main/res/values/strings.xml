@@ -1,4 +1,13 @@
 <resources>
-    <string name="app_name">androidhw3</string>
-    <string name="description_post_menu">Post menu</string>
+    <string name="app_name" translatable="false">androidhw3</string>
+    <string name="description_post_menu" translatable="false">Post menu</string>
+    <string name="remove" >remove</string>
+
+    <string name="description_post_save">Save</string>
+    <string name="post_text">Post Text</string>
+    <string name="error_empty_content" >error_empty_content</string>
+    <string name="menu_edit" >edit</string>
+    <string name="text_post">text_post</string>
+    <string name="Edit_Message" >Edit Message</string>
+    />
 </resources>
