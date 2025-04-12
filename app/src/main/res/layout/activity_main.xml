@@ -11,9 +11,9 @@
         android:id="@+id/recycler_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/barrier_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/textEdit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -55,7 +55,7 @@
         android:layout_height="48dp"
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toTopOf="@id/content"
-        app:srcCompat="@android:drawable/ic_menu_edit"
+        app:srcCompat="@drawable/pencil"
 
         />
 
@@ -64,7 +64,7 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:hint="@string/Edit_Message"
-        android:importantForAutofill="no"
+
         android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="@+id/addEdit"
         app:layout_constraintEnd_toStartOf="@+id/cancel_edit"
@@ -74,19 +74,20 @@
 
     <ImageButton
         android:id="@+id/cancel_edit"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
         android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="@+id/recycler_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/addEdit"
 
-        app:srcCompat="@android:drawable/ic_notification_clear_all" />
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintTop_toTopOf="@+id/addEdit"
+        app:layout_constraintVertical_bias="0.541"
+        app:srcCompat="@drawable/canceltwo" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:constraint_referenced_ids="addEdit,textEdit,cancel_edit" />
 </androidx.constraintlayout.widget.ConstraintLayout>

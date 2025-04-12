@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 viewModel.repostPost(post.id)
             }
         })
-        binding.recyclerView.layoutManager = LinearLayoutManager(this) // Устанавливаем LayoutManager
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
         viewModel.data.observe(this) { posts ->
             adapter.submitList(posts)
@@ -64,9 +64,9 @@ class MainActivity : AppCompatActivity() {
               if(it.id != 0L){
                   binding.content.setText(it.content)
                   binding.content.requestFocus()
-                  binding.cancelEdit.visibility = View.VISIBLE
+                  binding.group.visibility = View.VISIBLE
               } else {
-                  binding.cancelEdit.visibility = View.GONE
+                  binding.group.visibility = View.GONE
               }
           }
 
