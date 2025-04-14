@@ -39,15 +39,17 @@
         app:layout_constraintTop_toBottomOf="@id/author"
         tools:text="@sample/posts.json/data/published" />
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/menu"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/App.Widget.optionsButton"
+        android:layout_width="23dp"
+        android:layout_height="25dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/description_post_menu"
-        android:src="@drawable/more_vertical_svgrepo_com"
+        app:icon="@drawable/more_vertical_svgrepo_com"
+        app:layout_constraintBottom_toBottomOf="@+id/author"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/author" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrierTop"
@@ -73,12 +75,15 @@
         app:constraint_referenced_ids="content" />
 
 
-    <ImageButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/likesView"
+        android:checkable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        style="@style/App.Widget.likeButton"
+        app:icon="@drawable/ic_like_selector"
         android:background="@android:color/transparent"
-        android:src="@drawable/like_svgrepo_com"
+        android:button="@drawable/ic_like_selector"
 app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         android:layout_marginTop="24dp"
         />
@@ -94,15 +99,6 @@ app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         app:layout_constraintEnd_toStartOf="@id/numberOfVies"
         app:layout_constraintTop_toTopOf="@+id/likesView" />
 
-    <TextView
-        android:id="@+id/likes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="10"
-        app:layout_constraintBottom_toBottomOf="@+id/likesView"
-        app:layout_constraintStart_toEndOf="@id/likesView"
-        app:layout_constraintTop_toTopOf="@+id/likesView" />
 
     <TextView
         android:id="@+id/numberOfVies"
@@ -113,26 +109,18 @@ app:layout_constraintTop_toBottomOf="@id/barrierBottom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/views" />
 
-    <ImageView
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/imageView"
+        style="@style/App.Widget.imageViewButton"
+        app:icon="@drawable/_share_90177"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         app:layout_constraintBottom_toBottomOf="@+id/likesView"
-        app:layout_constraintStart_toEndOf="@+id/likes"
+        app:layout_constraintStart_toEndOf="@+id/likesView"
         app:layout_constraintTop_toTopOf="@+id/likesView"
-        app:srcCompat="@drawable/_share_90177" />
+         />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="5"
 
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

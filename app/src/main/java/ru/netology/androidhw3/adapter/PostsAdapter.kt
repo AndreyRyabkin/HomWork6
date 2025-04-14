@@ -3,7 +3,6 @@ package ru.netology.androidhw3.adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.widget.PopupMenu
-import androidx.lifecycle.LiveData
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -47,12 +46,22 @@ class PostsViewHolder(
             published.text = post.published
             content.text = post.content
 
-            likes.text = format(post.counter)
-            numberOfVies.text = format(post.numberView)
-            textView.text = format(post.repost)
 
-            likesView.setImageResource(
-                if (post.likeByMe) R.drawable.like_red else R.drawable.like_svgrepo_com)
+            numberOfVies.text = format(post.numberView)
+
+
+             imageView.apply {
+                 isChecked = post.share
+                 text = format(post.repost)
+             }
+
+
+            likesView.apply {
+                isChecked = post.likeByMe
+                text  = format(post.counter)
+            }
+
+
 
             likesView.setOnClickListener {
                 onInteractionListener.onLike(post)

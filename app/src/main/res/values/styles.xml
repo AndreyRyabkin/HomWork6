@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<style name="App.Widget.likeCheckBox" parent="Widget.MaterialComponents.CompoundButton.CheckBox">
+    <item name="buttonTint">@color/collor_like_selector</item>
+
+</style>
+
+<style name="App.Widget.likeButton" parent="Widget.MaterialComponents.Button.TextButton">
+<item name="iconTint">@color/collor_like_selector</item>
+
+</style>
+
+    <style name="App.Widget.imageViewButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/black</item>
+    </style>
+
+    <style name="App.Widget.optionsButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="iconTint">@color/black</item>
+    </style>
+    </resources>
